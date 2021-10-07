@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer = a;
+                
+                /*
+                내 코드
+                if (a > b){
+                    answer = b;
+                    if(b > c){
+                        answer = c
+                    }
+                    else{
+                        answer = b
+                    }
+                }
+
+                else{
+                    if(a > c){
+                        answer = c
+                    }
+                    else{
+                        answer = a
+                    }
+                }
+                */
+                if( a < b ){
+                    answer = a;
+                }
+                else{
+                    answer = b;
+                }
+                if(answer > c){
+                    answer = c;
+                }
+                
+
+                return answer
+            }
+            console.log(solution(6, 5, 11));
+        </script>
+    </body>
+</html>

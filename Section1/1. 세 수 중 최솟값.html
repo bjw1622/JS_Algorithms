@@ -6,12 +6,24 @@
   <body>
     <script>
       function solution(a, b, c) {
+        /*
         let answer = a;
         let arr = [a, b, c];
         for (let i = 1; i < arr.length; i++) {
           if (arr[i] < answer) {
             answer = arr[i];
           }
+        }
+        */
+
+        let answer;
+        if (a < b) {
+          answer = a;
+        } else {
+          answer = b;
+        }
+        if (c < answer) {
+          answer = c;
         }
         return answer;
       }

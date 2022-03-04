@@ -6,6 +6,15 @@
   <body>
     <script>
       function solution(arr) {
+        /*
+            내장함수로 최솟값, 최댓값 구하기
+            Math.min(3,5,234,52,1) => 이런 식을 인자값으로 숫자를 전달
+            만약 인수로 배열을 던지고 싶다면??
+            const arr = [1,2,3,432,5,2,21]
+            Math.min(...arr)   ...arr => 정제 연산자(배열을 펼쳐 준다)
+            console.log(...arr) => 1 2 3 432 5 2 21 이런식으로 출력
+        */
+
         // 안정적인 큰 숫자로 지정하기
         // let min = Numebr.MAX_SAFE_INTEAGER
         let answer = arr[0];

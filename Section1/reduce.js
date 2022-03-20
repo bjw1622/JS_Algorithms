@@ -5,6 +5,7 @@
 // predicate => 콜백 함수 호출
 // function forEach(predicate, thisArg) {}
 // 값을 생성해서 return
+// 대체적으로 sum 구할 때 많이 사용한다.
 
 // function reduce(predicate, val) {
 //   let result = val;

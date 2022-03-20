@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        /*
+        replace, replaceAll 사용하기
+        let answer = s.replaceAll('A', '#');
+        return answer;
+        */
+
+        let answer = '';
+        for (let x of s) {
+          if (x === 'A') {
+            answer += '#';
+          } else {
+            answer += x;
+          }
+        }
+        return answer;
+      }
+
+      let str = 'BANANA';
+      // B#N#N#
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

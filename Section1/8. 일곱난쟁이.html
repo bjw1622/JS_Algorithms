@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        // 총합 구하기
+        let total = arr.reduce((acc, val) => {
+          return acc + val;
+        }, 0);
+
+        /*
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            let count = arr[i] + arr[j];
+            if (total - count === 100 && i !== j) {
+              let deleteOne = arr.indexOf(arr[i]);
+              arr.splice(deleteOne, 1);
+              let deleteTwo = arr.indexOf(arr[i]);
+              arr.splice(deleteTwo, 1);
+              return arr;
+            }
+          }
+        }
+      }
+      */
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (total - (arr[i] + arr[j]) === 100) {
+              // 배열에서 앞의 숫자인 j를 먼저 빼버려도 i번쨰 배열은 변화가 없기 때문에
+              // j먼저 제거 해준다.
+              arr.splice(j, 1);
+              arr.splice(i, 1);
+              return arr;
+            }
+          }
+        }
+      }
+      let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>

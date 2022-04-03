@@ -26,3 +26,4 @@ let answer = a.filter(function (v, i) {
   }
 });
 console.log(answer);
+ 

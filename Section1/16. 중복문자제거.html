@@ -8,15 +8,20 @@
 <body>
     <script>
         function solution(s) {
-            let answer = "";
+            let answer = ""
             for (let x of s) {
-                if (answer.indexOf(x) === -1)
-                    answer += x;
+                // indexOf
+                // answer에서 indexOf 했을 떄 값이 존재하지 않으면 추가한다.
+                if (answer.indexOf(x) === -1) {
+                    answer += x
+                }
             }
-            console.log(answer);
+            return answer;
         }
         console.log(solution("ksekkset"));
+        // kset 중복된 문자는 출력 x
     </script>
 </body>
+>>>>>>> 1df817704078e2c6c959ea7ea427354d64660e51
 
 </html>

@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        answer = parseInt(str.replace(/[^0-9]/g, ""));
+
+        /*
+        let answer = "";
+        if (str[0] === "0") {
+          answer = str.split("").splice(1).join("");
+        } else {
+          answer = str;
+        }
+        */
+
+        return answer;
+      }
+
+      let str = "g0en2T0s8eSoft";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
+
+<!-- 
+    split은 문자열을 배열로
+    join은 배열을 문자열로
+
+    isNaN(x) => 요소가 숫자가 아니면 true 숫자면 false
+    const a = "a123das"
+    let answer = ""
+    for(let x of a){
+        if(!isNaN(x)){
+            answer += x
+        }
+    }
+-->

@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s, t) {
+        /*
+        내 풀이
+        const TArray = [];
+        const answer = [];
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] === t) {
+            TArray.push(i);
+          }
+        }
+        for (let i = 0; i < s.length; i++) {
+          let minIndex = 11000;
+          for (let j = 0; j < TArray.length; j++) {
+            let m = Math.abs(i - TArray[j]);
+            if (minIndex > m) {
+              minIndex = m;
+            }
+          }
+          answer.push(minIndex);
+        }
+        return answer;
+        */
+
+        //더 나은 풀이 O(n)
+        const answer = [];
+        let p = 1000;
+        for (let x of s) {
+          if (x === t) {
+            p = 0;
+            answer.push(p);
+          } else {
+            p++;
+            answer.push(p);
+          }
+        }
+        p = 1000;
+        for (let i = s.length - 1; i >= 0; i--) {
+          if (s[i] === t) {
+            p = 0;
+          } else {
+            p++;
+            answer[i] = Math.min(answer[i], p);
+          }
+        }
+        return answer;
+      }
+
+      let str = "teachermode";
+      console.log(solution(str, "e"));
+    </script>
+  </body>
+</html>
